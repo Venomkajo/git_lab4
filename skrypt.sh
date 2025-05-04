@@ -24,4 +24,13 @@ then
     do
         echo "Log $i, skrypt.sh, data: $(date)" >> "log{$i}.txt"
     done
+elif [ "$Argument" == "--help" ]
+then
+    echo "Użycie: ./skrypt.sh <argument>"
+    echo "Argumenty:"
+    echo "--date  - wyświetla aktualną datę i czas"
+    echo "--logs {liczba} - generuje pliki logów 100 lub podaną liczbę"
+    echo "--help  - wyświetla pomoc"
+else
+    echo "Nieznany argument. Użyj skrypt.sh --help, aby uzyskać więcej informacji."
 fi
