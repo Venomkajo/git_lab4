@@ -11,9 +11,8 @@ if [ "$Argument" == "--date" ]
 then
     echo "Data i czas: $(date)"
     exit 0
-elif [ "$Argument" == "logs" ]
+elif [ "$Argument" == "--logs" ]
 then
-    echo "Logs"
     if [ -z "$2" ]
     then
         Range=100
@@ -25,3 +24,4 @@ then
     do
         echo "Log $i, skrypt.sh, data: $(date)" >> "log{$i}.txt"
     done
+fi
